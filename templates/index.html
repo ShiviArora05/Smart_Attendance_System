@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Attendance Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>Smart Attendance System</h1>
+
+    <p>
+        Welcome, <b>{{ session.user }}</b>  
+        (<i>{{ session.role | capitalize }}</i>)
+    </p>
+
+    {% if session.role == "admin" %}
+        <button onclick="location.href='/face'">
+            Mark Face Attendance
+        </button>
+
+        <button onclick="location.href='/qr'">
+            Mark QR Attendance
+        </button>
+    {% endif %}
+
+    <button onclick="location.href='/attendance'">
+        View Attendance
+    </button>
+
+    <button onclick="location.href='/logout'">
+        Logout
+    </button>
+</div>
+
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Attendance System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>Smart Attendance System</h1>
+
+    <button onclick="location.href='/face'">
+        Mark Face Attendance
+    </button>
+
+    <button onclick="location.href='/qr'">
+        Mark QR Attendance
+    </button>
+    <button onclick="location.href='/attendance'">
+    View Attendance
+</button>
+
+<button onclick="location.href='/logout'">
+    Logout
+</button>
+
+</div>
+
+</body>
+</html> -->
