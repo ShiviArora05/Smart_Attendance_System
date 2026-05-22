@@ -1,4 +1,100 @@
-body {
+body{
+font-family:Arial,sans-serif;
+
+background:linear-gradient(
+135deg,
+#667eea,
+#764ba2
+);
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+margin:0;
+}
+
+.container{
+
+background:rgba(
+255,255,255,0.15
+);
+
+backdrop-filter:blur(10px);
+
+padding:40px;
+
+width:450px;
+
+border-radius:20px;
+
+text-align:center;
+
+color:white;
+
+box-shadow:
+0 8px 32px rgba(0,0,0,.3);
+
+}
+
+button{
+
+width:100%;
+
+padding:15px;
+
+margin:10px;
+
+border:none;
+
+border-radius:10px;
+
+font-size:16px;
+
+cursor:pointer;
+
+transition:.4s;
+}
+
+button:hover{
+
+transform:scale(1.05);
+
+}
+
+.stats{
+
+display:flex;
+
+justify-content:space-between;
+
+}
+
+.card{
+
+background:rgba(
+255,255,255,.2
+);
+
+padding:10px;
+
+width:45%;
+
+border-radius:10px;
+
+}
+
+.footer{
+
+margin-top:20px;
+
+font-size:12px;
+}
+/* body {
     font-family: Arial, sans-serif;
     background: linear-gradient(135deg, #667eea, #764ba2);
     color: white;
@@ -33,4 +129,4 @@ button {
 
 button:hover {
     background: #00b4d8;
-}
+} */

@@ -2,6 +2,85 @@
 <html>
 <head>
     <title>Smart Attendance Dashboard</title>
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🚀 Smart Attendance System</h1>
+
+<h3>
+Welcome {{ session.user }}
+({{ session.role | capitalize }})
+</h3>
+
+<div id="clock"></div>
+
+<div class="stats">
+
+<div class="card">
+<h2>👨‍🎓 Students</h2>
+<p>12</p>
+</div>
+
+<div class="card">
+<h2>📋 Records</h2>
+<p>40</p>
+</div>
+
+</div>
+
+{% if session.role=="admin" %}
+
+<button onclick="location.href='/face'">
+📷 Face Attendance
+</button>
+
+<button onclick="location.href='/qr'">
+📱 QR Attendance
+</button>
+
+{% endif %}
+
+<button onclick="location.href='/attendance'">
+📊 View Attendance
+</button>
+
+<button onclick="location.href='/logout'">
+🚪 Logout
+</button>
+
+<p class="footer">
+Created by Shivi Arora ❤️
+</p>
+
+</div>
+
+<script>
+function updateClock() {
+const now = new Date();
+
+document.getElementById("clock")
+.innerHTML=
+"📅 "+now.toLocaleDateString()
++"<br>⏰ "+
+now.toLocaleTimeString();
+}
+
+setInterval(updateClock,1000)
+updateClock()
+</script>
+
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Attendance Dashboard</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
@@ -34,7 +113,7 @@
 </div>
 
 </body>
-</html>
+</html> -->
 
 <!-- <!DOCTYPE html>
 <html>
